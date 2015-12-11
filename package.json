@@ -1,0 +1,32 @@
+{
+  "name": "vcat",
+  "version": "1.0.0",
+  "description": "A simple CLI concatenation tool",
+  "main": "index.js",
+  "bin": {
+    "vcat": "./index.js"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com/vekat/vcat.git"
+  },
+  "keywords": [
+    "concatenate",
+    "concat",
+    "pipe",
+    "cat",
+    "cli"
+  ],
+  "author": "Vitor Cortez <vitor.a.cortez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vekat/vcat/issues"
+  },
+  "homepage": "https://github.com/vekat/vcat#readme",
+  "dependencies": {
+    "yargs": "^3.31.0"
+  }
+}
