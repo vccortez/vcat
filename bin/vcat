@@ -24,7 +24,8 @@ var argv = require('yargs')
   )
   .help('h')
   .alias('h', 'help')
-  .version(() => require('./package.json').version)
+  .version(() => require('../package.json').version)
+  .alias('v', 'version')
   .argv;
 
 var readStreams, writeStream;
