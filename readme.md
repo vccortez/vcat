@@ -1,6 +1,6 @@
 ## vcat
 
-A simple command line tool built with streams to concatenate.
+A simple concatenation command line tool built with Node.js streams.
 
 ## Install
 
