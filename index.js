@@ -1,23 +1,21 @@
 module.exports = concatStreams;
 
 function concatStreams(readables, writable) {
-  var fn = function asyncRead(s) {
-    return new Promise(function(res, rej) {
-      var chunks = '';
-
-      s.on('data', chunk => chunks += chunk);
-
-      s.on('end', () => res(chunks));
-    });
-  };
-
-  var promises = readables.map(fn);
-
+  var promises = readables.map(asyncRead);
   var results = Promise.all(promises);
 
-  results.then(chunks => {
-    var data = chunks.join('\n');
+  results.then(buffers => {
+    var data = Buffer.concat(buffers);
 
     writable.write(data);
+  });
+}
+
+function asyncRead(stream) {
+  return new Promise(resolve => {
+    var buffers = [];
+
+    stream.on('data', chunk => buffers.push(chunk));
+    stream.on('end', () => resolve(Buffer.concat(buffers)));
   });
 }
