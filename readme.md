@@ -1,4 +1,6 @@
-## vcat
+# vcat
+
+[![npm package](https://nodei.co/npm/vcat.png?mini=true)](https://nodei.co/npm/vcat/)
 
 A simple concatenation command line tool built with Node.js streams.
 
