@@ -1,11 +1,11 @@
 {
   "name": "vcat",
   "version": "1.2.0",
-  "description": "A simple CLI concatenation tool",
+  "description": "A simple command line concatenation tool",
   "main": "./index.js",
   "bin": "./bin/vcat",
   "engines": {
-    "node": ">=4.0"
+    "node": ">=4.0.0"
   },
   "preferGlobal": true,
   "repository": {
