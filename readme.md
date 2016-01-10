@@ -37,3 +37,7 @@ $ (date; echo "Hello World") | vcat -o output.txt
 ```bash
 $ vcat -s src/*.js | transpilerProgram
 ```
+
+#### License
+
+This software is licensed under (MIT)[license].
