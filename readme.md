@@ -1,11 +1,13 @@
 # vcat
 
-[![npm package](https://nodei.co/npm/vcat.png?mini=true)](https://nodei.co/npm/vcat/)
+[![Build Status](https://travis-ci.org/vekat/vcat.svg?branch=master)](https://travis-ci.org/vekat/vcat)
 
 A simple concatenation command line tool built with Node.js streams.  
 Basically, it is a JavaScript version of Unix's `cat` utility program.
 
 ### Install
+
+[![npm package](https://nodei.co/npm/vcat.png?mini=true)](https://nodei.co/npm/vcat/)
 
 You might want to install `vcat` as a development dependency:
 ```bash
@@ -38,6 +40,6 @@ $ (date; echo "Hello World") | vcat -o output.txt
 $ vcat -s src/*.js | transpilerProgram
 ```
 
-#### License
+### License
 
 This software is licensed under [MIT](license).
