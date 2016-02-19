@@ -1,7 +1,9 @@
 # vcat
 
 [![Build Status](https://travis-ci.org/vekat/vcat.svg?branch=master)](https://travis-ci.org/vekat/vcat)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/5b2597e506e04690a837330710463e14)](https://www.codacy.com/app/vitoracortez-github/vcat)
 [![npm](https://img.shields.io/npm/v/vcat.svg)](https://www.npmjs.com/package/vcat)
+
 
 A simple concatenation command line tool built with Node.js streams.  
 Basically, it is a JavaScript version of Unix's `cat` utility program.
