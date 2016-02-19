@@ -6,7 +6,7 @@ var child = require('child_process');
 
 var should = require('should');
 
-describe("vcat", function() {
+describe('vcat', function() {
   var g = {
     executable: path.join(__dirname, '..', 'bin/vcat'),
     input: [{
@@ -26,12 +26,12 @@ describe("vcat", function() {
     }
   });
 
-  it("should send concatenation of two files to another file", done => {
+  it('should send concatenation of two files to another file', (done) => {
     var vcat = child.spawn(
       g.executable, ['-s', g.input[0].path, g.input[1].path, '-o', g.output]
     );
 
-    vcat.on('close', code => {
+    vcat.on('close', (code) => {
       var output = fs.readFileSync(g.output, 'utf8');
 
       (code).should.be.equal(0);
@@ -40,18 +40,18 @@ describe("vcat", function() {
     });
   });
 
-  it("should send concatenation of two files to stdout", done => {
+  it('should send concatenation of two files to stdout', (done) => {
     var vcat = child.spawn(
       g.executable, ['-s', g.input[0].path, g.input[1].path]
     );
 
     var chunks = '';
 
-    vcat.stdout.on('data', chunk => {
+    vcat.stdout.on('data', (chunk) => {
       chunks += chunk.toString();
     });
 
-    vcat.on('close', code => {
+    vcat.on('close', (code) => {
       (code).should.be.equal(0);
       (chunks).should.be.equal(g.input[0].content + g.input[1].content);
       done();
@@ -62,7 +62,7 @@ describe("vcat", function() {
     fs.unlinkSync(g.output);
   });
 
-  it("should send concatenation of stdin to stdout", done => {
+  it('should send concatenation of stdin to stdout', (done) => {
     var vcat = child.spawn(g.executable);
 
     var echos = child.exec('(echo Hello; echo World)');
@@ -71,7 +71,7 @@ describe("vcat", function() {
 
     var stringData = '';
 
-    vcat.stdout.on('data', data => {
+    vcat.stdout.on('data', (data) => {
       stringData += data.toString();
     });
 
