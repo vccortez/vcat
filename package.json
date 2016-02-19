@@ -1,6 +1,6 @@
 {
   "name": "vcat",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A simple command line concatenation tool",
   "main": "./index.js",
   "bin": "./bin/vcat",
